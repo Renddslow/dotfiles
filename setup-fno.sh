@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # load the main profile settings
-export DEVELOPMENT=$HOME/Development
+export DEVELOPMENT=$HOME/repos
 export SCRIPTS=$DEVELOPMENT/dotfiles
 
 # setup the flavor

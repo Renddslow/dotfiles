@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # where everything lives
-export DEVELOPMENT=$HOME/Development
+export DEVELOPMENT=$HOME/repos
 export DOTFILES=$DEVELOPMENT/dotfiles
 
 # bring on the scripts
