@@ -1,0 +1,39 @@
+#!/bin/bash
+
+echo "Did you write good unit tests? [y/N]"
+
+ORANGE='\033[0;33m'
+PURPLE='\033[0;35m'
+NC='\033[0m'
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+
+exec < /dev/tty
+
+read testInput
+
+if [ "$testInput" == "y" ]; then
+	echo -e "${GREEN}Whoa! who do you think you are? We need to battle!"
+	echo -e "*battle starting sound effects, wipe transition*"
+	echo -e "$(<~/repos/dotfiles/.golem)"
+	echo -e "CODE N00B sent out UNIT TESTS${NC}"
+	echo -e "${RED}You send out well tested code!"
+	npm run test
+	testResults=$?
+	if [ $testResults -eq 1 ]
+	then
+		echo -e "${RED}You were defeated by CODE N00B!${NC}"
+		echo -e "${GREEN}Hahaha you should've written better code!${NC}"
+		echo -e "${RED}You have lost all your friends and money.${NC}"
+		exit 1
+	else
+		echo -e "${RED}You defeated CODE N00B!"
+		echo -e "Your code is evolving!"
+		echo -e "$(<~/repos/dotfiles/.charizard)"
+		echo -e "${NC}"
+		echo -e "${GREEN}Aww man! Here's all the upvotes${NC}"
+	fi
+else
+	echo -e "${GREEN}Really? Do you hate happiness?${NC}"
+	exit 1
+fi

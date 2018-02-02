@@ -1,0 +1,10 @@
+#!/bin/bash
+
+RED='\033[0;31m'
+NC='\033[0m'
+PURPLE='\033[0;35m'
+
+branch=$(git rev-parse --symbolic --abbrev-ref HEAD)
+echo -e "${PURPLE}You have checked in to ${branch}. Good job! Here's a Rapidash.${NC}"
+echo -e "${RED}$(<~/repos/dotfiles/.rapidash)"
+echo -e "${NC}"
